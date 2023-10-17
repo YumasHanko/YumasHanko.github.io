@@ -2,51 +2,80 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>您的网页标题</title>
+    <title>您的网站标题</title>
     <style>
+        /* 基础样式 */
         body {
             font-family: 'Arial', sans-serif;
-            margin: 40px;
             background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
-
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            background-color: #fff;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        img {
-            max-width: 100%;
-            height: auto;
+        .header-logo {
+            text-align: center;
+            padding: 20px 0;
         }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery-item {
+            width: 300px;
+            height: 400px;
+            position: relative;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .download-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
             background-color: #333;
             color: #fff;
+            padding: 10px 20px;
             text-align: center;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <!-- 图片和文本 -->
-        <img src="图片地址1" alt="描述">
-        <p>文本描述1</p>
+        <!-- 头部LOGO区域 -->
+        <div class="header-logo">
+            <a href="#"><img src="您的LOGO链接" alt="网站LOGO"></a>
+        </div>
 
-        <img src="图片地址2" alt="描述">
-        <p>文本描述2</p>
+        <!-- 图片画廊区域 -->
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="您的图片链接1" alt="图片1">
+                <a href="#" class="download-btn">BOOTH DL</a>
+            </div>
 
-        <!-- 按钮 -->
-        <a href="链接地址" class="btn">BOOTH DL</a>
+            <div class="gallery-item">
+                <img src="您的图片链接2" alt="图片2">
+                <a href="#" class="download-btn">BOOTH DL</a>
+            </div>
+
+            <!-- 您可以根据需要添加更多的 .gallery-item 区域 -->
+
+        </div>
     </div>
+
 </body>
 </html>
