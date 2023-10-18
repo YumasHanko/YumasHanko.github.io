@@ -14,22 +14,21 @@
             padding: 0;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
             display: flex;
         }
         .header {
-            background-color: #000;
+            background-color: #434858;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
             width: 100%;
         }
         .sidebar {
-            background-color: #000;
-            width: 250px;
+            background-color: #434858;
+            width: 125px;  /* 减少了导航栏的宽度 */
             height: 100vh;
             padding: 20px;
+            position: fixed;  /* 锚定导航栏 */
         }
         .sidebar a {
             color: #fff;
@@ -43,6 +42,7 @@
         .gallery {
             flex: 1;
             padding: 20px;
+            margin-left: 145px;  /* 为了避免内容被侧边栏遮挡 */
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
