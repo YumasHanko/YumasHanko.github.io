@@ -16,26 +16,44 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+        }
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .sidebar {
+            background-color: #000;
+            width: 250px;
+            height: 100vh;
             padding: 20px;
         }
-        .header-logo {
-            text-align: center;
-            padding: 20px 0;
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
         }
         .gallery {
+            flex: 1;
+            padding: 20px;
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
         }
         .gallery-item {
             width: 300px;
-            height: 400px;
             position: relative;
         }
         .gallery-item img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
         }
         .download-btn {
@@ -54,10 +72,19 @@
 </head>
 <body>
 
+    <!-- 顶部标题栏 -->
+    <div class="header">
+        您的网站标题
+    </div>
+
     <div class="container">
-        <!-- 头部LOGO区域 -->
-        <div class="header-logo">
-            <a href="#"><img src="您的LOGO链接" alt="网站LOGO"></a>
+
+        <!-- 左侧导航栏 -->
+        <div class="sidebar">
+            <a href="#">主页</a>
+            <a href="#">页面1</a>
+            <a href="#">页面2</a>
+            <!-- 添加其他链接 -->
         </div>
 
         <!-- 图片画廊区域 -->
@@ -73,8 +100,8 @@
             </div>
 
             <!-- 您可以根据需要添加更多的 .gallery-item 区域 -->
-
         </div>
+
     </div>
 
 </body>
